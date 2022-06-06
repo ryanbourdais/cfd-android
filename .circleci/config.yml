@@ -10,7 +10,8 @@ jobs:
     steps:
       - checkout
       - run: npm install
-      - run: cd .. ls
+      - run: cd ..
+      - run: ls
       - android/create-avd:
           avd-name: myavd
           install: true
