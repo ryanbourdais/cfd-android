@@ -3,15 +3,6 @@ orbs:
   android: circleci/android@2.0.3
   node: circleci/node@5.0.2
 jobs:
-  install-node:
-    docker:
-      - image: 'cimg/base:stable'
-    steps:
-      - checkout
-      - node/install:
-          install-yarn: true
-          node-version: '16.13'
-      - run: node --version
   test:
     executor:
       name: android/android-machine
@@ -37,7 +28,4 @@ jobs:
 workflows:
   test:
     jobs:
-      - install-node
-      - test:
-          requires:
-            - install-node
+      - test
