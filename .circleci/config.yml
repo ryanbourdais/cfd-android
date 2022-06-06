@@ -10,7 +10,7 @@ jobs:
     steps:
       - checkout
       - run: npm install
-      - run: cd ..
+      - run: cd node_modules/@react-native-community/cli-platform-android
       - run: ls
       - android/create-avd:
           avd-name: myavd
