@@ -9,6 +9,7 @@ jobs:
       tag: 2021.10.1
     steps:
       - checkout
+      - run: yarn install
       - android/create-avd:
           avd-name: myavd
           install: true
