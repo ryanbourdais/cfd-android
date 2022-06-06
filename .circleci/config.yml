@@ -9,9 +9,6 @@ jobs:
       tag: 2021.10.1
     steps:
       - checkout
-      - run: ls
-      - run: cat /home/circleci/node_modules/@react-native-community/cli-platform-android/native_modules.gradle
-      - run: ls
       - android/create-avd:
           avd-name: myavd
           install: true
