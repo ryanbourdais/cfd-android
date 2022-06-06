@@ -10,7 +10,7 @@ jobs:
     steps:
       - checkout
       - run: ls
-      - run: touch /home/circleci/node_modules/@react-native-community/cli-platform-android/native_modules.gradle
+      - run: cat /home/circleci/node_modules/@react-native-community/cli-platform-android/native_modules.gradle
       - run: ls
       - android/create-avd:
           avd-name: myavd
