@@ -13,7 +13,7 @@ jobs:
           avd-name: myavd
           install: true
           system-image: system-images;android-29;default;x86
-      - run: sudo apt npm install
+      - run: npm install
       - run: npm i @react-native-community/cli-platform-android
       - android/start-emulator:
           avd-name: myavd
